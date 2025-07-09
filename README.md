@@ -5,6 +5,8 @@
 - git repo
   - https://github.com/tobyspringboot/splearn
 
+<hr>
+
 ## 프로젝트 아키텍처
 ### 아키텍처
 - 헥사고날 아키텍처이며, 동시에 도메인 모델 패턴을 가짐.
@@ -54,3 +56,14 @@
 - 제약사항
   - 의존성은 한 방향으로만 흐른다.
     - 외부(Actor) -> 어댑터 -> 애플리케이션 -> 도메인
+
+<hr>
+
+## 새로 알게된 내용 정리
+- @NaturalId / @NaturalIdCache
+  - @NaturalId
+    - 엔티티에서 비즈니스적으로 유일한 키를 나타냄
+    - (ex. 주민번호, 이메일 등)
+  - @NaturalIdCache
+    - 이 자연 키 기반 조회에 대해 2차 캐시를 활성화함
+      - Hibernate에서는 일반적으로 PK(primary key)로만 캐시를 지원하지만, @NaturalIdCache를 추가하면 그 조회 결과를 캐싱할 수 있다.
