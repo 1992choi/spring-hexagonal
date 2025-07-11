@@ -67,3 +67,10 @@
   - @NaturalIdCache
     - 이 자연 키 기반 조회에 대해 2차 캐시를 활성화함
       - Hibernate에서는 일반적으로 PK(primary key)로만 캐시를 지원하지만, @NaturalIdCache를 추가하면 그 조회 결과를 캐싱할 수 있다.
+- ReflectionTestUtils
+  - private 필드는 외부에서 직접 접근이 불가능하지만, 테스트 과정에서 부득이하게 값을 주입해야 하는 경우 ReflectionTestUtils를 사용하여 이를 설정할 수 있다.
+    - ex. ReflectionTestUtils.setField(member, "id", 1L);
+- Mockito를 사용한 테스트코드 작성
+  - Mockito를 활용하면 번거롭게 stub을 만들지 않고 테스트가 가능하여, `편의성`과 `테스트코드의 가독성`을 높일 수 있다.
+  - 커밋 히스토리 참조
+    - 섹션 4. 회원 애플리케이션 서비스 테스트 (1)
