@@ -81,3 +81,11 @@
   - Spring Data Repository는 JpaRepository를 포함하고 있으며, save()는 그 핵심 메서드 중 하나로, 저장 외에 이벤트 트리거의 역할도 한다.
   - 커밋 히스토리 참조
     - 섹션 4. 회원 애플리케이션 서비스 테스트 (1)
+- Optimize Imports
+  - 프로젝트 또는 패키지 우클릭 > Optimize Imports
+    - 더 이상 사용되지 않는 클래스나 패키지 import를 자동으로 삭제한다.
+    - 특정 기준에 맞춰 import를 정렬한다.
+    - 와일드카드를 풀거나 와일드카드로 압축한다.
+- @Fallback
+  - 여러 후보 빈 중 아무 것도 주입되지 않을 때, 최후의 대안으로 사용될 빈을 지정한다.
+  - Spring Framework 6.2부터 새롭게 도입된 어노테이션

@@ -5,7 +5,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
 import tobyspring.splearn.application.provided.MemberFinder;
-import tobyspring.splearn.application.provided.MemberRegister;
 import tobyspring.splearn.application.required.MemberRepository;
 import tobyspring.splearn.domain.Member;
 
