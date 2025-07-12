@@ -13,4 +13,7 @@ public interface MemberRepository extends Repository<Member, Long> { // 특이�
     Member save(Member member);
 
     Optional<Member> findByEmail(Email email);
+
+    Optional<Member> findById(Long memberId);
+
 }
