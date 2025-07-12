@@ -37,6 +37,7 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     implementation("org.junit-pioneer:junit-pioneer:2.3.0")
+    testImplementation("org.mockito:mockito-core:5.18.0")
     mockitoAgent("org.mockito:mockito-core:5.18.0") { isTransitive = false }
 
 }
