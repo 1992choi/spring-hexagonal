@@ -1,4 +1,4 @@
-//package tobyspring.splearn.application.provided;
+//package tobyspring.splearn.application.member.provided;
 //
 //import org.springframework.context.annotation.Import;
 //import tobyspring.splearn.SplearnTestConfiguration;
