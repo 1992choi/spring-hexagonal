@@ -89,3 +89,13 @@
 - @Fallback
   - 여러 후보 빈 중 아무 것도 주입되지 않을 때, 최후의 대안으로 사용될 빈을 지정한다.
   - Spring Framework 6.2부터 새롭게 도입된 어노테이션
+- 엔티티의 equals()와 hashCode() 구현
+  - 어노테이션(@EqualsAndHashCode)을 사용하지 않고 직접 구현한 이유는
+    - JPA(Entity)에서 흔히 발생하는 프록시 문제(Hibernate Proxy) 를 안전하게 처리하기 위해서이다.
+      - 엔티티는 JPA 프록시 객체로 감싸져 있을 수 있음 
+      - 프록시는 실제 클래스와 ==, getClass(), instanceof에서 다르게 동작할 수 있음 
+      - 즉, 동일한 엔티티인데도 equals()가 false가 나오는 경우가 생길 수 있음
+  - 참고
+    - AbstractEntity 클래스
+    - 섹션 5. 엔티티의 equals()와 hashCode() 구현
+
