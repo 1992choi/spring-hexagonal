@@ -122,4 +122,12 @@ class MemberTest {
         Assertions.assertThat(member.getDetail().getIntroduction()).isEqualTo(request.introduction());
     }
 
+    @Test
+    void updateInfoFail() {
+        assertThatThrownBy(() -> {
+            var request = new MemberInfoUpdateRequest("Leo", "toby100", "자기소개");
+            member.updateInfo(request);
+        }).isInstanceOf(IllegalStateException.class);
+    }
+
 }
