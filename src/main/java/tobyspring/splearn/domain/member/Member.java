@@ -1,6 +1,8 @@
 package tobyspring.splearn.domain.member;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import jakarta.persistence.UniqueConstraint;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -29,7 +31,6 @@ public class Member extends AbstractEntity {
 
     private MemberStatus status;
 
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private MemberDetail detail;
 
     public static Member register(MemberRegisterRequest createRequest, PasswordEncoder passwordEncoder) {
